@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import clsx from 'clsx';
+import { suitFont } from '@/libs/fonts';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-screen h-dvh">
+      <body className={clsx(suitFont.className, 'w-screen h-dvh')}>
         <main className="w-full max-w-[500px] h-full p-4 box-border mx-auto ">
           {children}
         </main>

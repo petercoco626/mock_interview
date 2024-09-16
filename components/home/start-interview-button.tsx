@@ -1,6 +1,6 @@
 'use client';
 
-import { Pathname } from '@/libs/contants/path';
+import { Pathname } from '@/libs/path';
 import { Button } from '../base/button';
 
 export function StartInterviewButton() {
