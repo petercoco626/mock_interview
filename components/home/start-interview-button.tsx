@@ -15,8 +15,9 @@ export function StartInterviewButton() {
           e.preventDefault();
         }
       }}
+      className="w-full"
     >
-      시작하기
+      면접 시작
     </Button>
   );
 }
