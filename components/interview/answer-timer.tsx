@@ -15,8 +15,8 @@ const configurationOnTimerToReady: ConfigurationOnTimerToReady = {
 };
 
 const configurationOnTimerToAnswer: ConfigurationOnTimerToReady = {
-  startTime: 3,
-  finishTime: -3,
+  startTime: 60,
+  finishTime: -11,
   isTimerOn: false,
 };
 
@@ -100,7 +100,7 @@ export function AnswerTimer() {
     return (
       <div
         className={clsx(
-          'flex flex-col items-center gap-2 w-full rounded-lg bg-system-blue-light p-3 box-border',
+          'flex flex-col items-center gap-2 w-full rounded-lg p-3 box-border',
           timeToAnswer < 0 ? 'bg-[#FFC7C3]' : 'bg-system-blue-light'
         )}
       >

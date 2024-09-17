@@ -1,3 +1,4 @@
+import { MockQuestions } from '@/libs/contants/mock-questions';
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
@@ -11,7 +12,7 @@ interface QuestionState {
 export const useQuestionStore = create<QuestionState>()(
   devtools(
     (set) => ({
-      questions: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
+      questions: MockQuestions,
       actions: {
         setQuestions: (questions: string[]) => set(() => ({ questions })),
       },

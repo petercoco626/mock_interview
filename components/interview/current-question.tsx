@@ -14,7 +14,7 @@ export function CurrentQuestion() {
       <div className="text-xxxl_bold text-system-green-light text-center">
         Q
       </div>
-      <p className="text-m_medium text-[#333333] text-center">
+      <p className="text-m_medium text-[#333333] text-center break-keep">
         {selectedQuestions[currentQuestionIdx]}
       </p>
     </div>
