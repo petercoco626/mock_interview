@@ -3,8 +3,12 @@
 import { Pathname } from '@/libs/path';
 import { Button } from '../base/button';
 
-// TODO : callback 로직을 외부에서 전달하도록 해서 처리할 수 있도록 수정, home이랑 question에서 보여져야하는 모달이 다름
-export function StartInterviewButton() {
+interface StartInterviewButtonProps {
+  onClickCallback: () => void;
+}
+export function StartInterviewButton({
+  onClickCallback,
+}: StartInterviewButtonProps) {
   const questions = [];
 
   return (
@@ -12,8 +16,11 @@ export function StartInterviewButton() {
       href={Pathname.INTERVIEW}
       as={'link'}
       onClick={(e) => {
+        // 사실 여기서는 전체 onClick을 받기보다는
+        // 어차피 질문 갯수에 따라 모달 on/off 차이니까 이렇게만 작성해도 될것 같음.
         if (questions.length === 0) {
           e.preventDefault();
+          onClickCallback();
         }
       }}
       className="w-full"

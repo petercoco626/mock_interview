@@ -17,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(suitFont.className, 'w-screen h-dvh')}>
         <main className="w-full max-w-[500px] h-full mx-auto ">{children}</main>
+        <div id="modal-root" />
       </body>
     </html>
   );

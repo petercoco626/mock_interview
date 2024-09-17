@@ -1,7 +1,7 @@
 import { RouteQuestionPageButton } from '@/components/home/route-question-page-button';
-import { StartInterviewButton } from '@/components/common/start-interview-button';
 import { gmarketSansFont } from '@/libs/fonts';
 import clsx from 'clsx';
+import { StartInterviewButtonLayout } from '@/components/home/start-interview-button-layout';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         {/**아이콘 */}
         <div className="w-[200px] h-[200px] bg-slate-500 rounded mx-auto" />
         <div className="space-y-2">
-          <StartInterviewButton />
+          <StartInterviewButtonLayout />
           <RouteQuestionPageButton />
         </div>
       </section>
