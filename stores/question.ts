@@ -11,7 +11,7 @@ interface QuestionState {
 export const useQuestionStore = create<QuestionState>()(
   devtools(
     (set) => ({
-      questions: [],
+      questions: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
       actions: {
         setQuestions: (questions: string[]) => set(() => ({ questions })),
       },

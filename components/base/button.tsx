@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Link, { LinkProps } from 'next/link';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-type ButtonVariant = 'primary' | 'secondary';
+type ButtonVariant = 'primary' | 'secondary' | 'text';
 
 type ButtonSize = 'large' | 'middle' | 'small';
 interface BaseButtonProps {
@@ -52,6 +52,11 @@ export function Button({
       'active:bg-system-green-light/15',
       'hover:bg-system-green-light/15',
       'disabled:border-system-gray disabled:text-system-gray'
+    ),
+    text: clsx(
+      // text는 디자인 시스템이 정의된게 아니라서 임시로 처리
+      'border-transparent',
+      'text-[#999999]'
     ),
   };
 

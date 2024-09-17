@@ -3,6 +3,8 @@
 import { Pathname } from '@/libs/path';
 import { Button } from '../base/button';
 import { useQuestionStore } from '@/stores/question';
+import { useInterviewActions } from '@/stores/interview';
+import { extractRandomQuestionsFromTotalQuestions } from '@/libs/utils';
 
 interface StartInterviewButtonProps {
   onClickCallback: () => void;
@@ -11,6 +13,15 @@ export function StartInterviewButton({
   onClickCallback,
 }: StartInterviewButtonProps) {
   const questions = useQuestionStore((state) => state.questions);
+
+  const { setSelectedQuestions } = useInterviewActions();
+
+  const onStartInterview = () => {
+    const extractedQuestions =
+      extractRandomQuestionsFromTotalQuestions(questions);
+
+    setSelectedQuestions(extractedQuestions);
+  };
 
   return (
     <Button
@@ -23,6 +34,7 @@ export function StartInterviewButton({
           e.preventDefault();
           onClickCallback();
         }
+        onStartInterview();
       }}
       className="w-full"
     >

@@ -1,3 +1,5 @@
+import { Interview } from '@/components/interview';
+
 export default function InterviewPage() {
-  return <div></div>;
+  return <Interview />;
 }
