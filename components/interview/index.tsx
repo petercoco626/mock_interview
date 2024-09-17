@@ -8,6 +8,7 @@ import { useInterviewStore } from '@/stores/interview';
 import { CurrentQuestion } from './current-question';
 import { QuestionIdxController } from './question-idx-controller';
 import { FinishInterview } from './finish-interview';
+import { AnswerTimer } from './answer-timer';
 
 export function Interview() {
   const router = useRouter();
@@ -37,7 +38,8 @@ export function Interview() {
   return (
     <div className="w-full h-full">
       <Header />
-      <div className="w-full h-[calc(100%-136px)] px-4 pt-7 box-border">
+      <div className="w-full h-[calc(100%-136px)] px-4 pt-7 box-border space-y-4">
+        <AnswerTimer />
         <CurrentQuestion />
       </div>
       <QuestionIdxController />
