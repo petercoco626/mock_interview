@@ -5,7 +5,7 @@ import { StartInterviewButtonLayout } from '@/components/home/start-interview-bu
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center">
+    <div className="w-full h-full flex flex-col justify-center items-center p-4 box-border">
       <section className="space-y-6 w-full">
         <h1
           className={clsx(gmarketSansFont.className, 'text-center text-[40px]')}

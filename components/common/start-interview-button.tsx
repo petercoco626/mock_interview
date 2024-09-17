@@ -2,6 +2,7 @@
 
 import { Pathname } from '@/libs/path';
 import { Button } from '../base/button';
+import { useQuestionStore } from '@/stores/question';
 
 interface StartInterviewButtonProps {
   onClickCallback: () => void;
@@ -9,7 +10,7 @@ interface StartInterviewButtonProps {
 export function StartInterviewButton({
   onClickCallback,
 }: StartInterviewButtonProps) {
-  const questions = [];
+  const questions = useQuestionStore((state) => state.questions);
 
   return (
     <Button
