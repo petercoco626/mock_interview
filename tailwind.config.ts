@@ -9,6 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        'system-blue-light': '#DCECFF',
+        'system-blue': '#75B4FF',
         'system-green-light': '#00BFBF',
         'system-green': '#007D7D',
         'system-green-dark': '#005C5C',

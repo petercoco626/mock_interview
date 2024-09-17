@@ -16,9 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(suitFont.className, 'w-screen h-dvh')}>
-        <main className="w-full max-w-[500px] h-full p-4 box-border mx-auto ">
-          {children}
-        </main>
+        <main className="w-full max-w-[500px] h-full mx-auto ">{children}</main>
       </body>
     </html>
   );

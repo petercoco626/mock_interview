@@ -1,5 +1,5 @@
 import { RouteQuestionPageButton } from '@/components/home/route-question-page-button';
-import { StartInterviewButton } from '@/components/home/start-interview-button';
+import { StartInterviewButton } from '@/components/common/start-interview-button';
 import { gmarketSansFont } from '@/libs/fonts';
 import clsx from 'clsx';
 
