@@ -15,5 +15,5 @@
 
 ## 2. Todo
 
-[ ] 질문 등록 UI + logic
-[ ] local-storage로 등록된 질문 관리
+- [ ] 질문 등록 UI + logic
+- [ ] local-storage로 등록된 질문 관리
