@@ -10,6 +10,7 @@
 ## 1. 사용 기술 스택
 
 - 언어 : Typescript
+- 상태관리 : zustand
 - Framework : Next.js(App Router)
 - 스타일링 : tailwindcss
 
