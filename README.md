@@ -13,6 +13,7 @@
 - 상태관리 : zustand
 - Framework : Next.js(App Router)
 - 스타일링 : tailwindcss
+- CI/CD : vercel
 
 ## 2. Todo
 
