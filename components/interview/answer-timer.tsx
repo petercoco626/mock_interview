@@ -82,16 +82,28 @@ export function AnswerTimer() {
         <div className="mx-auto text-[#666666] text-xxxl_bold">
           {covertTimeToMMSS(timeToReady)}
         </div>
-        <button
-          type="button"
-          onClick={
-            isTimerToReadyStopped ? onResumeTimerToReady : onStopTimerToReady
-          }
-          className="mx-auto"
-        >
-          {isTimerToReadyStopped && <IcPlay />}
-          {!isTimerToReadyStopped && <IcPause />}
-        </button>
+        {isTimerToReadyStopped && (
+          <button
+            type="button"
+            onClick={
+              isTimerToReadyStopped ? onResumeTimerToReady : onStopTimerToReady
+            }
+            className="mx-auto"
+            aria-label="답변 준비 타이머를 재개합니다."
+          >
+            <IcPlay />
+          </button>
+        )}
+        {!isTimerToReadyStopped && (
+          <button
+            type="button"
+            onClick={onStopTimerToReady}
+            className="mx-auto"
+            aria-label="답변 준비 타이머를 일시중지합니다."
+          >
+            <IcPause />
+          </button>
+        )}
       </div>
     );
   }
@@ -114,16 +126,26 @@ export function AnswerTimer() {
           {timeToAnswer < 0 && '-'}
           {covertTimeToMMSS(timeToAnswer)}
         </div>
-        <button
-          type="button"
-          onClick={
-            isTimerToAnswerStopped ? onResumeTimerToAnswer : onStopTimerToAnswer
-          }
-          className="mx-auto"
-        >
-          {isTimerToAnswerStopped && <IcPlay />}
-          {!isTimerToAnswerStopped && <IcPause />}
-        </button>
+        {isTimerToAnswerStopped && (
+          <button
+            type="button"
+            onClick={onResumeTimerToAnswer}
+            className="mx-auto"
+            aria-label="답변 타이머를 재개합니다"
+          >
+            <IcPlay />
+          </button>
+        )}
+        {!isTimerToAnswerStopped && (
+          <button
+            type="button"
+            onClick={onStopTimerToAnswer}
+            className="mx-auto"
+            aria-label="답변 타이머를 일시중지합니다"
+          >
+            <IcPause />
+          </button>
+        )}
       </div>
     );
   }

@@ -33,6 +33,7 @@ export function Header() {
           type="button"
           onClick={openModal}
           className="w-10 h-10 flex items-center justify-center"
+          aria-label="면접을 멈출건지에 대한 모달을 띄웁니다"
         >
           <IcCaretLeft />
         </button>
